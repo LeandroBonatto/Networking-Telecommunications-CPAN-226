@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Form</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="email" name="sender_email" placeholder="Sender Email" required><br>
+        <input type="password" name="sender_password" placeholder="Sender Password" required><br>
+        <input type="text" name="receiver_emails" placeholder="Receiver Email(s)" required><br>
+        <input type="text" name="cc_email" placeholder="CC Email" required><br>
+        <input type="text" name="subject" placeholder="Subject" required><br>
+        <textarea name="body" placeholder="Message Body" required></textarea><br>
+        <input type="file" name="attachment"><br>
+        <input type="submit" value="Send Email">
+    </form>
+</body>
+</html>
+
+
